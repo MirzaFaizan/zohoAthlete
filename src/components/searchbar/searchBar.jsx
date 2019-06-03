@@ -26,6 +26,12 @@ class CustomizedInputBase extends React.Component {
         }
       }
     
+      handleKeyPress = (event) => {
+        if(event.key == 'Enter'){
+          this.setRedirect()
+        }
+      }
+
       updateSearch=(e)=>{
           this.setState({searchBy:e.target.value})
       }
@@ -55,6 +61,7 @@ class CustomizedInputBase extends React.Component {
                         }} placeholder="Search Athlete"
                         autoFocus={true}
                         value={this.state.searchBy}
+                        onKeyPress={this.handleKeyPress}
                         onChange={(e)=>this.updateSearch(e)}/>
 
                       <IconButton style={{

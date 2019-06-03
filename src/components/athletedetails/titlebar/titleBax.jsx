@@ -77,7 +77,7 @@ function SearchAppBar(props) {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Athlete Details : {props.email}
+            Athlete Details > {props.email}
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
