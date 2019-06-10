@@ -119,7 +119,7 @@ function AthletePhysical(props) {
                     </Grid>
                     <Grid item xs={4}>
                     <div className={classes.root}>
-                    <Typography variant="h4" color="primary" style={{marginTop:15}} > 3/4 SPRINT (w/ Ball) </Typography>
+                    <Typography variant="h4" color="primary" style={{marginTop:15}} > WING ATTAK-Imperial </Typography>
                         <Paper className={classes.paper} elevation={3}>
                         <VictoryChart
                                 domainPadding={10}
@@ -147,7 +147,7 @@ function AthletePhysical(props) {
                     </Grid>
                     <Grid item xs={4}>
                     <div className={classes.root}>
-                    <Typography variant="h4" color="primary" style={{marginTop:15}} > 3/4 SPRINT (w/ Ball) </Typography>
+                    <Typography variant="h4" color="primary" style={{marginTop:15}} > PRO AGILITY </Typography>
                         <Paper className={classes.paper} elevation={3}>
                         <VictoryChart
                                 domainPadding={10}
@@ -175,7 +175,7 @@ function AthletePhysical(props) {
                     </Grid>
                     <Grid item xs={4}>
                     <div className={classes.root}>
-                    <Typography variant="h4" color="primary" style={{marginTop:15}} > 3/4 SPRINT (w/ Ball) </Typography>
+                    <Typography variant="h4" color="primary" style={{marginTop:15}} > BROAD JUMP-Imperial </Typography>
                         <Paper className={classes.paper} elevation={3}>
                         <VictoryChart
                                 domainPadding={10}

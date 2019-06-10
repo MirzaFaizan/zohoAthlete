@@ -3,6 +3,7 @@ import TitleBar from './titlebar/titleBax';
 import PerosnalInfo from './personalinfo/personalnfo';
 import AthleteStatistics from './athletestatistics/athleteStatistics';
 import AthletePhysical from './athletephysical/athletePhysical';
+import AthleteVisualAnalysis from './athletevisualanalysis/athleteVisualAnalysis';
 function AthleteDetailsView(props) {
   return (
     <div>
@@ -10,6 +11,7 @@ function AthleteDetailsView(props) {
       <PerosnalInfo/>
       <AthleteStatistics/>
       <AthletePhysical/>
+      <AthleteVisualAnalysis/>
     </div>
   );
 }
