@@ -5,6 +5,7 @@ import { VictoryArea, VictoryChart, VictoryPolarAxis, VictoryTheme } from 'victo
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
+
 const styles = theme => ({
   root: {
     flexGrow: 1,
