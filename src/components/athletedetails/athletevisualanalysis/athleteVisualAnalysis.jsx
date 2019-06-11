@@ -1,7 +1,7 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import {Grid, Container, Typography} from '@material-ui/core';
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme } from 'victory';
+import { VictoryArea, VictoryChart, VictoryPolarAxis, VictoryTheme } from 'victory';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -23,10 +23,12 @@ const styles = theme => ({
   },
 });
 
-const data = [
-    {quarter: 1, earnings: 1.7},
-    {quarter: 2, earnings: 3.5},
-    {quarter: 3, earnings: 2.2},
+const data=[
+    { x: 1, y: 2, y0: 0 },
+    { x: 2, y: 3, y0: 1 },
+    { x: 3, y: 5, y0: 1 },
+    { x: 4, y: 4, y0: 2 },
+    { x: 5, y: 6, y0: 2 }
   ];
 
 function AthleteVisualAnalysis(props) {
@@ -78,27 +80,22 @@ function AthleteVisualAnalysis(props) {
                     
 
                     <Grid item xs={12} sm={8} alignContent="center">
-                    <VictoryChart
-                                domainPadding={10}
-                                theme={VictoryTheme.material}
-                                >
-                                <VictoryAxis
-                                    tickValues={["Athlete", "Combined Best", "Combined Avergae"]}
-                                />
-                                <VictoryAxis
-                                    dependentAxis
-                                    tickFormat={[0,0.5,1,1.5,2,2.5,3,3.5]}
-                                />
-                                <VictoryBar
-                                    animate={{
-                                        duration: 2000,
-                                        onLoad: { duration: 1000 }
-                                    }}
-                                    data={data}
-                                    x={"quarter"}
-                                    y={"earnings"}
-                                />
-                            </VictoryChart>
+                    <VictoryChart polar
+                      theme={VictoryTheme.material}
+                    >
+                    <VictoryPolarAxis dependentAxis
+                        style={{ axis: { stroke: "none" } }}
+                        tickFormat={() => null}
+                    />
+                    <VictoryPolarAxis/>
+                    <VictoryArea
+                        data={data}
+                        style={{
+                            height:'50%',
+                        data: { fill: "#c43a31" },
+                        }}
+                    />
+                    </VictoryChart>
                     </Grid>        
                     </Grid>   
                 </Paper>
