@@ -43,7 +43,7 @@ function AthletePhysical(props) {
     return (
             <Container>
                 <Grid container spacing={4}>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} md={4}>
                     <div className={classes.root}>
                     <Typography variant="h4" color="primary" style={{marginTop:10}} > 10 M SPRINT </Typography>
                         <Paper className={classes.paper} elevation={3}>
@@ -100,7 +100,7 @@ function AthletePhysical(props) {
                         </Paper>
                         </div>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} md={4}>
                     <div className={classes.root}>
                     <Typography variant="h4" color="primary" style={{marginTop:15}} >Pro Agility </Typography>
                         <Paper className={classes.paper} elevation={3}>
@@ -126,7 +126,7 @@ function AthletePhysical(props) {
                         </Paper>
                         </div>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} md={4}>
                     <div className={classes.root}>
                     <Typography variant="h4" color="primary" style={{marginTop:15}} > Biometric Height </Typography>
                         <Paper className={classes.paper} elevation={3}>
@@ -154,7 +154,7 @@ function AthletePhysical(props) {
                         </Paper>
                         </div>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} md={4}>
                     <div className={classes.root}>
                     <Typography variant="h4" color="primary" style={{marginTop:15}} > Standing Reach </Typography>
                         <Paper className={classes.paper} elevation={3}>
@@ -179,7 +179,7 @@ function AthletePhysical(props) {
                         </Paper>
                         </div>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid xs={12} md={4}>
                     <div className={classes.root}>
                     <Typography variant="h4" color="primary" style={{marginTop:15}} > Biometric Weight </Typography>
                         <Paper className={classes.paper} elevation={3}>
@@ -204,7 +204,7 @@ function AthletePhysical(props) {
                         </Paper>
                         </div>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} md={4}>
                     <div className={classes.root}>
                     <Typography variant="h4" color="primary" style={{marginTop:15}} > Biometric Wingspan </Typography>
                         <Paper className={classes.paper} elevation={3}>
