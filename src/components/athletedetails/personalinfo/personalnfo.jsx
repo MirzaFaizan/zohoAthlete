@@ -28,8 +28,9 @@ const styles = theme => ({
 
 function FullWidthGrid(props) {
   const { classes } = props;
-
+//   console.log(props.data)
   return (
+    
     <div className={classes.root}>
         <Container>
 
@@ -37,54 +38,93 @@ function FullWidthGrid(props) {
             <Grid item xs={12}>
             <Paper className={classes.paper} elevation={3}>
                 <Grid container spacing={3}>
-                    <Grid item xs={12} sm={4} style={{ borderRight: '0.07em solid grey',  }}>
+                    <Grid item xs={12} sm={5} style={{ borderRight: '0.07em solid grey',  }}>
                         <Typography variant="h4" color="primary">
-                            Faizan Ejaz
+                            {props.data.AccountUsername}
                         </Typography>
-                        <Typography variant="subtitle1">
-                        simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  Lorem
+                        <Typography variant="h5" color="primary">
+                            User ID
+                        </Typography>
+                        <Typography variant="subtitle2">
+                            {
+                                 props.data.ID ? props.data.ID : '-'
+                            }
+                               
+                            
+                        </Typography>
+
+                        <Typography variant="h5" color="primary">
+                            Sport Testing ID
+                        </Typography>
+                        <Typography variant="subtitle2">
+                            {
+                                props.data.SporttestingID ? props.data.SporttestingID : '-'
+                            }
+                        </Typography>
+
+                        <Typography variant="h5" color="primary">
+                            Date of Birth
+                        </Typography>
+                        <Typography variant="subtitle2">
+                            {
+                                props.data.DateofBirth ? props.data.DateofBirth : '-'
+                            }
+                        </Typography>
+
+                        <Typography variant="h5" color="primary">
+                            Primary Team
+                        </Typography>
+                        <Typography variant="subtitle2">
+                            {props.data.PrimaryTeam ? props.data.PrimaryTeam :'-'}
+                        </Typography>
+
+                        <Typography variant="h5" color="primary">
+                            RegisterTapAccount?
+                        </Typography>
+                        <Typography variant="subtitle2">
+                            {props.data['RegisterTAPAccount?'] ? props.data['RegisterTAPAccount?'] : '-'}
                         </Typography>
 
                     </Grid>
-                    <Grid item xs={12} sm={4} >
+                    <Grid item xs={12} sm={3} >
 
                         <Typography variant="h5" color="primary">
-                            SPORTS
+                            Address Line 1
                         </Typography>
                         <Typography variant="subtitle2">
-                            Futsal, Basketball, Tennis
+                            {props.data.AddressLine1 ? props.data.AddressLine1 : '-'}
                         </Typography>
 
                         <Typography variant="h5" color="primary">
-                            TEAM
+                        Address Line 2
                         </Typography>
                         <Typography variant="subtitle2">
-                            The A team
+                        {props.data.AddressLine2 ? props.data.AddressLine2 : '-'}
                         </Typography>
 
                         <Typography variant="h5" color="primary">
-                            REACTION
+                            State/Province
                         </Typography>
                         <Typography variant="subtitle2">
-                            0.8 S
+                            {props.data['State/Province'] ? props.data['State/Province'] : '-'}
                         </Typography>
 
                         <Typography variant="h5" color="primary">
-                            SPEED
+                            City/District
                         </Typography>
                         <Typography variant="subtitle2">
-                            552
+                            {props.data['City/District'] ? props.data['City/District'] : '-'}
                         </Typography>
 
-                        <Typography variant="h5" color="primary">
+                        {/* <Typography variant="h5" color="primary">
                             MEMORY
                         </Typography>
                         <Typography variant="subtitle2">
                             474
-                        </Typography>
+                        </Typography> */}
                     </Grid>
 
-                    <Grid item xs={12} sm={4} alignContent="center">
+                    <Grid item xs={12} sm={4} container alignContent="center">
                         <Avatar alt="Remy Sharp" src={Image}  className={classes.bigAvatar} />
                     </Grid>        
                     </Grid>   

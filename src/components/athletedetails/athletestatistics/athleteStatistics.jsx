@@ -22,22 +22,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function createData(name, attention, coordination, memory, perception, reasoning, score) {
-  return { name, attention, coordination, memory, perception, reasoning, score };
-}
 
-const rows = [
-  createData('Faizan Ejaz', 159, 557, 324, 124,456,400),
-  createData('Adnan Ejaz', 159, 557, 324, 124,456,400),
-  createData('Umair Ejaz', 159, 557, 324, 124,456,400),
-  createData('Irum Ejaz', 159, 557, 324, 124,456,400),
-  createData('Ahmed Raza', 159, 557, 324, 124,456,400),
-
-];
-
-function DenseTable() {
+function DenseTable(props) {
   const classes = useStyles();
-
+  // console.log(props.data)
+  const score = (parseInt(props.data.Attention.Score) + parseInt(props.data.Coordination.Score) + parseInt(props.data.Memory.Score) + parseInt(props.data.Perception.Score) +parseInt(props.data.Reasoning.Score))/5
   return (
     
     <Container>
@@ -50,7 +39,7 @@ function DenseTable() {
                     <Table className={classes.table} size="small">
                     <TableHead>
                         <TableRow>
-                        <TableCell>Full Name</TableCell>
+                        <TableCell>Username</TableCell>
                         <TableCell align="right">Attention</TableCell>
                         <TableCell align="right">Coordination</TableCell>
                         <TableCell align="right">Memory</TableCell>
@@ -60,19 +49,18 @@ function DenseTable() {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {rows.map(row => (
-                        <TableRow key={row.name}>
+                        {/* {rows.map(row => ( */}
+                        <TableRow>
                             <TableCell component="th" scope="row">
-                            {row.name}
+                            {props.name.AccountUsername}
                             </TableCell>
-                            <TableCell align="right">{row.attention}</TableCell>
-                            <TableCell align="right">{row.coordination}</TableCell>
-                            <TableCell align="right">{row.memory}</TableCell>
-                            <TableCell align="right">{row.perception}</TableCell>
-                            <TableCell align="right">{row.reasoning}</TableCell>
-                            <TableCell align="right">{row.score}</TableCell>
-                        </TableRow>
-                        ))}
+                            <TableCell align="right">{props.data.Attention.Score}</TableCell>
+                            <TableCell align="right">{props.data.Coordination.Score}</TableCell>
+                            <TableCell align="right">{props.data.Memory.Score}</TableCell>
+                            <TableCell align="right">{props.data.Perception.Score}</TableCell>
+                            <TableCell align="right">{props.data.Reasoning.Score}</TableCell>
+                            <TableCell align="right">{score}</TableCell>
+                       </TableRow> 
                     </TableBody>
                     </Table>
                 </Paper>
