@@ -16,7 +16,7 @@ class App extends React.Component {
     axios
     .post(
       // `https://zohoathlete.herokuapp.com/athlete/${params.email}`
-      `http://localhost:9092/athlete/${params.email}`
+      `http://zohoathlete.herokuapp.com/athlete/${params.email}`
       //, { headers: {"Authorization" : `Bearer ${token}`} }
     )
     .then(res => {
