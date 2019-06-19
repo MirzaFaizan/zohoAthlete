@@ -179,7 +179,7 @@ function AthletePhysical(props) {
                         </Paper>
                         </div>
                     </Grid>
-                    <Grid xs={12} md={4}>
+                    <Grid item xs={12} md={4}>
                     <div className={classes.root}>
                     <Typography variant="h4" color="primary" style={{marginTop:15}} > Biometric Weight </Typography>
                         <Paper className={classes.paper} elevation={3}>

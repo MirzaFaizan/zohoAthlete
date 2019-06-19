@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import {Grid, Container, Typography} from '@material-ui/core';
 // import { VictoryArea, VictoryChart, VictoryPolarAxis, VictoryTheme } from 'victory';
 import {
-  Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
+  Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,Tooltip
 } from 'recharts';
 
 import PropTypes from 'prop-types';
@@ -50,7 +50,7 @@ const styles = theme => ({
 
 function AthleteVisualAnalysis(props) {
   const { classes } = props;
-  console.log(props.data)
+  // console.log(props.data)
 
   
   let data = []
@@ -117,7 +117,8 @@ function AthleteVisualAnalysis(props) {
 
                     <Grid item xs={12} sm={8} container alignContent="center">
 
-                    <RadarChart cx={290} cy={200} outerRadius={150} width={700} height={500} data={data}>
+                    <RadarChart cx={290} cy={200} outerRadius={150} width={700} height={500} data={data} >
+                    <Tooltip />
                       <PolarGrid />
                       <PolarAngleAxis dataKey="name" />
                       <PolarRadiusAxis />

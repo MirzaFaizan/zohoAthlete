@@ -14,9 +14,9 @@ class App extends React.Component {
   componentDidMount(){
     const { params } = this.props.match;
     axios
-    .post(
-      // `https://zohoathlete.herokuapp.com/athlete/${params.email}`
-      `http://localhost:9092/athlete/${params.email}`
+    .get(
+      `https://zohoathlete.herokuapp.com/athlete/${params.email}`
+      // `http://localhost:9092/athlete/${params.email}`
       //, { headers: {"Authorization" : `Bearer ${token}`} }
     )
     .then(res => {
