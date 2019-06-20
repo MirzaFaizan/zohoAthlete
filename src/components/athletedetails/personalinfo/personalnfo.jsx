@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
-import Image from './faizan.jpg'
+// import Image from './faizan.jpg'
 import { Container } from '@material-ui/core';
 
 const styles = theme => ({
@@ -125,7 +125,7 @@ function FullWidthGrid(props) {
                     </Grid>
 
                     <Grid item xs={12} sm={4} container alignContent="center">
-                        <Avatar alt="Remy Sharp" src={Image}  className={classes.bigAvatar} />
+                        <Avatar alt="Remy Sharp" src='http://cdn.onlinewebfonts.com/svg/img_181369.png'  className={classes.bigAvatar} />
                     </Grid>        
                     </Grid>   
                 </Paper>
