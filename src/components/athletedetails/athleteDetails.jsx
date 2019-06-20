@@ -9,7 +9,7 @@ import CognitiveResults from './cognitiveresults/cognitiveresults.jsx';
 import SkillAnalysis from './skillanalysis/skillanalysis.jsx';
 
 function AthleteDetailsView(props) {
-  // console.log(props.data)
+  console.log(props.data)
   return (
     <div>
       <TitleBar email={props.email}/>

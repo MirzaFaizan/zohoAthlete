@@ -41,39 +41,48 @@ export default function skillanalysis(props){
              </Typography>
           
             <Grid container spacing={0} justify='center' alignItems='center' >
-            <Grid item xs={3} >
+            <Grid item xs={2} >
                 <Grid item xs={12}>
-                <CircularProgress size={90} thickness={2} variant="static" value={parseFloat(newArray[0].avg)} style={{borderRadius:'50%',border: '4px solid blue',padding:'2%'}} />         
+                <CircularProgress size={75} thickness={1} variant="static" value={parseFloat(newArray[0].avg)} style={{borderRadius:'50%',border: '4px solid blue',padding:'2%'}} />         
                 </Grid>
                 <Grid item xs={12}>
                 <Typography variant='subtitle1'>{newArray[0].category}:{newArray[0].avg}</Typography>
                 </Grid>
             </Grid>   
 
-            <Grid item xs={3}>
+            <Grid item xs={2}>
                 <Grid item xs={12}>
-                <CircularProgress size={90} thickness={2} variant="static" value={parseFloat(newArray[1].avg)} style={{borderRadius:'50%',border: '4px solid blue',padding:'2%'}} />         
+                <CircularProgress size={75} thickness={1} variant="static" value={parseFloat(newArray[1].avg)} style={{borderRadius:'50%',border: '4px solid blue',padding:'2%'}} />         
                 </Grid>
                 <Grid item xs={12}>
                 <Typography variant='subtitle1'>{newArray[1].category}:{newArray[1].avg}</Typography>
                 </Grid>
             </Grid>  
 
-               <Grid item xs={3}>
+               <Grid item xs={2}>
                 <Grid item xs={12}>
-                <CircularProgress size={90} thickness={2} variant="static" value={parseFloat(newArray[2].avg)} style={{borderRadius:'50%',border: '4px solid blue',padding:'2%'}} />         
+                <CircularProgress size={75} thickness={1} variant="static" value={parseFloat(newArray[2].avg)} style={{borderRadius:'50%',border: '4px solid blue',padding:'2%'}} />         
                 </Grid>
                 <Grid item xs={12}>
                 <Typography variant='subtitle1' style={{paddingLeft:'5%'}}>{newArray[2].category}:{newArray[2].avg}</Typography>
                 </Grid>
             </Grid>    
 
-            <Grid item xs={3} container justify='center' alignItems='center'>
+            <Grid item xs={2} container justify='center' alignItems='center'>
+                <Grid item xs={12}>
+                <CircularProgress size={75} thickness={1} variant="static" value={parseFloat(newArray[3].avg)} style={{borderRadius:'50%',border: '4px solid blue',padding:'2%'}} />         
+                </Grid>
+                <Grid item xs={12}>
+                <Typography variant='subtitle1' style={{paddingLeft:'8%'}}>{newArray[3].category}:{newArray[3].avg}</Typography>
+                </Grid>
+            </Grid>    
+
+            <Grid item xs={4} container justify='center' alignItems='center'>
                 <Grid item xs={12}>
                 <CircularProgress size={90} thickness={2} variant="static" value={parseFloat(newArray[3].avg)} style={{borderRadius:'50%',border: '4px solid blue',padding:'2%'}} />         
                 </Grid>
                 <Grid item xs={12}>
-                <Typography variant='subtitle1' style={{paddingLeft:'8%'}}>{newArray[3].category}:{newArray[3].avg}</Typography>
+                <Typography variant='subtitle1' style={{paddingLeft:'4%'}}>OverAll:{(newArray[0].avg+newArray[1].avg+newArray[2].avg+newArray[3].avg)/4}</Typography>
                 </Grid>
             </Grid>    
 
