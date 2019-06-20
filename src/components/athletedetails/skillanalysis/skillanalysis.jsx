@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import  Grid  from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { Paper } from '@material-ui/core';
 
 export default function skillanalysis(props){
 
@@ -31,7 +32,7 @@ export default function skillanalysis(props){
         
     });
 
-    console.log(newArray);
+    // console.log(newArray);
 
     return(
         <Container>
@@ -39,8 +40,9 @@ export default function skillanalysis(props){
              <Typography variant="h4" color="primary" style={{marginTop:10}} > 
              SKILL ANALYSIS
              </Typography>
-          
+             <Paper elevation={3} style={{padding:'3%'}}>
             <Grid container spacing={0} justify='center' alignItems='center' >
+           
             <Grid item xs={2} >
                 <Grid item xs={12}>
                 <CircularProgress size={75} thickness={1} variant="static" value={parseFloat(newArray[0].avg)} style={{borderRadius:'50%',border: '4px solid blue',padding:'2%'}} />         
@@ -77,7 +79,7 @@ export default function skillanalysis(props){
                 </Grid>
             </Grid>    
 
-            <Grid item xs={4} container justify='center' alignItems='center'>
+            <Grid item xs={4} container justify='center' alignItems='center' direction='column' >
                 <Grid item xs={12}>
                 <CircularProgress size={90} thickness={2} variant="static" value={parseFloat(newArray[3].avg)} style={{borderRadius:'50%',border: '4px solid blue',padding:'2%'}} />         
                 </Grid>
@@ -85,8 +87,9 @@ export default function skillanalysis(props){
                 <Typography variant='subtitle1' style={{paddingLeft:'4%'}}>OverAll:{(newArray[0].avg+newArray[1].avg+newArray[2].avg+newArray[3].avg)/4}</Typography>
                 </Grid>
             </Grid>    
-
-             </Grid>       
+          
+             </Grid>  
+             </Paper>     
         </Container>
     )
 }

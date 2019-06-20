@@ -7,9 +7,10 @@ import AthleteVisualAnalysis from './athletevisualanalysis/athleteVisualAnalysis
 import CombineResults from './combineresults/combineresults.jsx';
 import CognitiveResults from './cognitiveresults/cognitiveresults.jsx';
 import SkillAnalysis from './skillanalysis/skillanalysis.jsx';
+import AthleteType from './athleteType/athletetype.jsx';
 
 function AthleteDetailsView(props) {
-  console.log(props.data)
+  // console.log(props.data)
   return (
     <div>
       <TitleBar email={props.email}/>
@@ -20,6 +21,7 @@ function AthleteDetailsView(props) {
       <CombineResults data={props.data.combineTable}/>
       <CognitiveResults data={props.data.conginitiveresult}/>
       <AthleteVisualAnalysis data={props.data.visualsensoryresult}/>
+      <AthleteType data={props.data.atheletetypereport}/>
     </div>
   );
 }
