@@ -76,7 +76,7 @@ export default function DenseTable(props) {
                   </StyledTableCell>
                   <StyledTableCell>{row[1]}</StyledTableCell>
                   <StyledTableCell>{row[2]}</StyledTableCell>
-                  <StyledTableCell>{row[3]}</StyledTableCell>
+                  <StyledTableCell>{row[3].toPrecision(5)}</StyledTableCell>
                   <StyledTableCell>{row[4]}</StyledTableCell>
                 </StyledTableRow>
               )
